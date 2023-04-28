@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendendo</title>
+    <style>
+        h1{ color:white;
+            font: normal 25pt Arial;
+        
+        
+        
+        }
+        div#area{
+            color: white;
+            background: rgb(94, 14, 14);
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            margin-top: 200px;
+            margin-left: 200px;
+
+        }
+        input{
+            width: 100px;
+            margin-top: 20px;
+        }
+        div#resultado{
+            margin-top: 20px;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1> botando em pratica</h1>
+    <div id="area"> clique aqui</div>
+    <input type="number" name="texto1" id="texto1"/>
+    <input type="number" name="texto2" id="texto2"/>
+    <input type="button" value="somar" onclick="somar()">
+    <div id="resultado"> resultado</div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var corpo=window.document.body
+        corpo.style.background='black'
+        var area= window.document.getElementById('area')
+        area.addEventListener('click',clicar) 
+        function clicar(){
+            area.innerText='agora pode somar'
+            area.style.background='green'
+            area.style.color='blue'
+        }
+        function somar(){
+            var texto1=window.document.getElementById('texto1')
+            var texto2=window.document.getElementById('texto2')
+            var resultado= window.document.getElementById('resultado')
+            var n1= Number(texto1.value)
+            var n2= Number(texto2.value)
+            var s= n1 + n2
+            resultado.innerHTML=`A soma entre  ${n1} e ${n2} é igual a ${s}`
+
+        }
+    </script>
+    
+    
+    
+</body>
+</html>

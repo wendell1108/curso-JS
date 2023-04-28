@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radar</title>
+</head>
+<body>
+    <h1> Sistema de multas</h1>
+    velocidade do carro:<input type="number" name="texvel" id="texvel"> km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular(){
+            var texvel=window.document.getElementById('texvel')
+            var res=window.document.getElementById('res')
+            var vel= Number(texvel.value)
+            res.innerHTML = ` <p> sua velocidade atual é de ${vel}km/h</p>`
+            if( vel>60){
+                res.innerHTML+= '<p> vc esta <strong>MULTADO</strong> por excesso de velocidade!</p>'
+                    
+            }
+            res.innerHTML+= '<p> dirija sempre com cuidado e atenção!boa viagem</p>'
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR   ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 25pt Arial;
+            background: rgb(129, 13, 81);
+            color:aquamarine;
+            width: 300px;
+            height: 300pt;
+            line-height: 300px;
+            text-align: center;
+            margin-top: 200px;
+            margin-left: 200px;
+            
+
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div id="area">
+
+       passe o mouse
+
+    </div>
+    <div id="=area2"> </div>
+
+    <script>
+
+        var area= window.document.getElementById('area')
+        area.addEventListener('click',clicar)
+        area.addEventListener('mouseenter',entrar)
+        area.addEventListener('mouseout',sair)
+        function clicar(){
+        area.innerText='Te amo!'
+        area.style.background='red'
+        area.style.color='black'
+        }
+        function entrar() {
+            area.innerText= "agora clique!"
+            area.style.background='blue'
+            area.style.color='white'
+        }
+        function sair(){
+            area.innerText= "Deu certo! de novo!"
+            area.style.background='yellow'
+            area.style.color='green'
+        }
+        var corpo= window.document.body
+        corpo.style.background='black'
+
+    </script>
+    
+</body>
+</html>
