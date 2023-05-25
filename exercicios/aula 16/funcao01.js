@@ -6,7 +6,7 @@ function parimpar(n) {
     }
    
 }
-console.log(parimpar(22))
+console.log(parimpar(33))
 
  /*let res = parimpar(7)
 console.log(res)*/
