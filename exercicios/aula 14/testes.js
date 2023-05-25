@@ -1,5 +1,5 @@
 console.log('Vai começar hehe')
-for( var c= 1; c<=10;c++) {
+for( var c= 1; c<=15;c++) {
     console.log(c)
 
 }
